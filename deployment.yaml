@@ -14,7 +14,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.25
+      - name: b4ux1t3
+        image: b4ux1t3/homer:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
