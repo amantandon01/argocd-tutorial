@@ -14,7 +14,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: b4ux1t3
-        image: b4ux1t3/homer:latest
+      - name: b4bz
+        image: b4bz/homer:latest
         ports:
         - containerPort: 8080
