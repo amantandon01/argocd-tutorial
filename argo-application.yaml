@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app-deployment
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.email: "tandonaman10@gmail.com" 
+    notifications.argoproj.io/subscribe.on-sync-failed.email: "tandonaman10@gmail.com"
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/amantandon01/argocd-tutorial.git'
+    targetRevision: HEAD
+    path: '.'
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: appargo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
